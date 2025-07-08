@@ -46,12 +46,13 @@ public class OnlineCommand implements SimpleCommand {
 
     @Override
     public CompletableFuture<List<String>> suggestAsync(Invocation invocation) {
-        return CompletableFuture.completedFuture(invocation.arguments().length == 1 ?
+        return CompletableFuture.completedFuture(
                 SateVeTools.getINSTANCE().getServer().getAllPlayers()
                         .stream()
                         .map(Player::getUsername)
-                        .filter(u -> u.toLowerCase().startsWith(invocation.arguments()[0].toLowerCase()))
-                        .toList() : List.of());
+                        .filter(u -> invocation.arguments().length == 0 ||
+                                u.toLowerCase().startsWith(invocation.arguments()[0].toLowerCase()))
+                        .toList());
     }
 
     @Override

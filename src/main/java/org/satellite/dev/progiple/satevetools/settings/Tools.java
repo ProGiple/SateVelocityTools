@@ -44,10 +44,10 @@ public class Tools {
             String className = "org.satellite.dev.progiple.satevetools.commands." + Tools.capitalizeFirst(command) + "Command";
             Class<?> clazz = Class.forName(className);
 
-            String[] aliases = (String[]) settingsClass.getField("ALIASES").get(settings);
+            String aliases = (String) settingsClass.getField("ALIASES").get(settings);
             CommandMeta.Builder builder = manager.metaBuilder(command).plugin(INSTANCE);
 
-            if (aliases != null && aliases.length > 0) builder = builder.aliases(aliases);
+            if (aliases != null && !aliases.isEmpty()) builder = builder.aliases(aliases.split(", "));
             manager.register(builder.build(), (Command) clazz.getDeclaredConstructor().newInstance());
         }
     }

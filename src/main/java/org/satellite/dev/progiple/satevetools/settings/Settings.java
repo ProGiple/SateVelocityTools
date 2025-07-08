@@ -31,7 +31,7 @@ public class Settings extends YamlSerializable {
         public static class HUB implements CommandSettings {
             public boolean ENABLED = true;
             public List<String> HUB_SERVERS = List.of("hub");
-            public String[] ALIASES = new String[]{"lobby"};
+            public String ALIASES = "lobby";
             public String TELEPORT_MESSAGE = "[PRFX] Вы успешно переместились в хаб!";
         }
 
@@ -41,7 +41,7 @@ public class Settings extends YamlSerializable {
         public Settings.COMMANDS.FIND FIND = new FIND();
         public static class FIND implements CommandSettings {
             public boolean ENABLED = true;
-            public String[] ALIASES = new String[]{"search"};
+            public String ALIASES = "search, check";
             public List<String> TRANSLATES = List.of("hub-%-Хаб");
             public String SUCCESS_MESSAGE = "[PRFX] Игрок [player] находиться на сервере [server]";
             public String PLAYER_IS_OFFLINE = "[PRFX] Игрок [player] не найден!";
@@ -55,6 +55,7 @@ public class Settings extends YamlSerializable {
         public Settings.COMMANDS.ONLINE ONLINE = new ONLINE();
         public static class ONLINE implements CommandSettings {
             public boolean ENABLED = true;
+            public String ALIASES = "";
             public String SUCCESS_MESSAGE = "[PRFX] Игрок [player] онлайн!";
             public String PLAYER_IS_OFFLINE = "[PRFX] Игрок [player] оффлайн!";
             public String IS_YOU = "[PRFX] Это и так ты, и ты в сети :)";

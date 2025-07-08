@@ -1,0 +1,12 @@
+org\satellite\dev\progiple\satevetools\settings\Settings.class
+org\satellite\dev\progiple\satevetools\commands\FindCommand.class
+org\satellite\dev\progiple\satevetools\settings\Settings$COMMANDS$ONLINE.class
+org\satellite\dev\progiple\satevetools\settings\Settings$COMMANDS$HUB.class
+org\satellite\dev\progiple\satevetools\settings\Tools.class
+org\satellite\dev\progiple\satevetools\commands\HubCommand.class
+org\satellite\dev\progiple\satevetools\settings\CommandSettings.class
+org\satellite\dev\progiple\satevetools\settings\Settings$COMMANDS.class
+org\satellite\dev\progiple\satevetools\commands\OnlineCommand.class
+velocity-plugin.json
+org\satellite\dev\progiple\satevetools\SateVeTools.class
+org\satellite\dev\progiple\satevetools\settings\Settings$COMMANDS$FIND.class
